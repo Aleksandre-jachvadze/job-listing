@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Spartan:wght@500;700&display=swap');
+
+:root {
+  /* colors */
+  --primary-color: hsl(180, 29%, 50%);
+  --neutral-light-color: hsl(180, 31%, 95%);
+  --neutral-dark-color: hsl(180, 8%, 52%);
+  --neutral-very-dark-color: hsl(180, 14%, 20%);
+  --white-color: hsl(0, 0%, 100%);
+
+  /* box shadow */
+  --shadow-component: 0px 10px 15px rgba(94, 166, 165, .2);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  overflow-x: scroll;
+  min-height: 100vh;
+  font-weight: 500;
+  background-color: var(--neutral-light-color);
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ---- */
+.header {
+  display: flex;
+  align-items: flex-end;
+  background-image: url('/images/bg-header-desktop.svg');
+  background-size: cover;
+  background-color: var(--primary-color);
+  height: 15rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 111rem;
+  margin: 0 auto;
+}
+
+.filter-area {
+  min-height: 7rem;
+}
+
+.jobs-area {
+  padding-bottom: 2.4rem;
+}
+
+[data-anime] {
+  opacity: 0;
+  transition: .5s;
+}
+
+[data-anime="left"] {
+  transform: translateX(-30px);
+}
+
+.animate {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+@media (max-width: 1170px) {
+  .header {
+    background-image: url('/images/bg-header-mobile.svg');
+  }
+
+  .container {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 2.4rem;
+  }
+}

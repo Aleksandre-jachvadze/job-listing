@@ -1,0 +1,169 @@
+.job {
+    padding: 2.4rem 4rem;
+    margin-bottom: 2.4rem;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-component);
+}
+
+.job--featured {
+    border-left: 5px solid var(--primary-color);
+}
+
+.job--featured .job__content {
+    transform: translateX(-5px); 
+}
+
+.job__content {
+    display: flex;
+    min-height: 8.8rem;
+}
+
+.job__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2.4rem;
+}
+
+.job__company {
+    display: flex;
+    align-items: center;
+}
+
+.job__company-name {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.job__position {
+    margin: 1.2rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--neutral-very-dark-color);
+}
+
+.job__position:hover {
+    color: var(--primary-color);
+}
+
+.job__info {
+    display: flex;
+}
+
+.job__info p {
+    position: relative;
+    padding: 0 1.6rem;
+    font-size: 1.5rem;
+    color: var(--neutral-dark-color);
+}
+
+.job__info p:first-child {
+    padding-left: 0;
+}
+
+.job__info p:last-child {
+    padding-right: 0;
+}
+
+.job__info p:last-child::after {
+    display: none;
+}
+
+.job__info p::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--neutral-dark-color);
+}
+
+.job__company-name {
+    margin-right: 1.6rem;
+}
+
+.job__company span {
+    padding: .8rem 1rem .4rem 1rem;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.job__new {
+    margin-right: .8rem;
+    background-color: var(--primary-color);
+}
+
+.job__featured {
+    background-color: var(--neutral-very-dark-color)
+}
+
+.job__tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+
+.job__tags__btn {
+    padding: .8rem .8rem .6rem .8rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: .4rem;
+    background-color: var(--neutral-light-color);
+    color: var(--primary-color);
+}
+
+.job__tags__btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+@media (max-width: 800px) {
+    .job {
+        padding: 0 2.4rem 2.4rem 2.4rem;
+        margin-bottom: 4.8rem;
+    }
+
+    .job__content {
+        flex-direction: column;
+    }
+
+    .job__logo {
+        max-width: 5.5rem;
+        margin-top: -2.75rem;
+    }
+
+    .job__description {
+        margin: 0;
+        padding-bottom: 2.4rem;
+        margin-bottom: 2.4rem;
+        margin-top: .8rem;
+        border-bottom: 1px solid var(--neutral-dark-color);
+    }
+
+    .job__company-name {
+        font-size: 1.3rem;
+    }
+
+    .job__position {
+        font-size: 1.6rem;
+    }
+
+    .job__info p {
+        padding: 0 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .job__tags {
+        justify-content: flex-start;
+    }
+}
